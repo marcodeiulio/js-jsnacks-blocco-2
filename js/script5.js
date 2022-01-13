@@ -21,18 +21,18 @@ while (numbersTwo.length < randomLengthTwo) {
 
 console.table(numbersTwo);
 
-let difference = numbersOne.length - numbersTwo.length;
-console.log('Differenza: ' + difference);
 
 
 
-if (difference < 0) {
+if (numbersOne.length < numbersTwo.length) {
 	console.log('Il PRIMO è più corto');
-	while ((difference * -1) === 0) {
+	while (numbersOne.length === randomLengthTwo) {
 		let digit = Math.floor(Math.random() * 10);
 		numbersOne.push(digit);
 	}
-} else if (difference > 0) {
+}
+
+} else if (numbersTwo.length < numbersOne.length) {
 	console.log('Il SECONDO è più corto');
 } else {
 	console.log('Sono lunghi uguale');
