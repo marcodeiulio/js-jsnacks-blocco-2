@@ -26,14 +26,16 @@ console.table(numbersTwo);
 
 if (numbersOne.length < numbersTwo.length) {
 	console.log('Il PRIMO è più corto');
-	while (numbersOne.length === randomLengthTwo) {
+	while (numbersOne.length !== randomLengthTwo) {
 		let digit = Math.floor(Math.random() * 10);
 		numbersOne.push(digit);
 	}
-}
-
 } else if (numbersTwo.length < numbersOne.length) {
 	console.log('Il SECONDO è più corto');
+	while (numbersTwo.length !== numbersOne.length) {
+		let digit = Math.floor(Math.random() * 10);
+		numbersTwo.push(digit);
+	}
 } else {
 	console.log('Sono lunghi uguale');
 }
